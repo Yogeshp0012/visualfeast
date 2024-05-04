@@ -1,0 +1,113 @@
+
+
+<nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+    <div class="px-3 py-3 lg:px-5 lg:pl-3">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center justify-start rtl:justify-end">
+          <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+              <span class="sr-only">Open sidebar</span>
+              <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                 <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+              </svg>
+           </button>
+          <a href="https://flowbite.com" class="flex ms-2 md:me-24">
+            <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">PhotoShop</span>
+          </a>
+        </div>
+        <div class="flex items-center">
+            <div class="flex items-center ms-3">
+              <div>
+                 <button type="button" disabled class="inline-flex disabled:cursor-not-allowed items-center gap-x-1.5 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                    Download as zip
+                  </button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </nav>
+  
+  <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
+     <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+        <ul class="space-y-2 font-medium">
+           <li class="p-2">
+                 <label for="first-name" class="block text-sm font-medium leading-6 text-white">Album Name</label>
+                 <div class="mt-2">
+                   <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block p-2 w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 outline-none">
+                 </div>
+           </li>
+           <li class="p-2">
+              <label for="first-name" class="block text-sm font-medium leading-6 text-white">Images Quality</label>
+              <div class="mt-2">
+                <input type="number" name="first-name" id="first-name" autocomplete="given-name" class="block p-2 w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 outline-none">
+              </div>
+           </li>
+           <li class="p-2">
+              <label for="first-name" class="block text-sm font-medium leading-6 text-white">Width</label>
+              <div class="mt-2">
+                <input type="number" name="first-name" id="first-name" autocomplete="given-name" class="block p-2 w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 outline-none">
+              </div>
+           </li>
+           <li class="p-2">
+              <label for="first-name" class="block text-sm font-medium leading-6 text-white">Height</label>
+              <div class="mt-2">
+                <input type="number" name="first-name" id="first-name" autocomplete="given-name" class="block p-2 w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 outline-none">
+              </div>
+           </li>
+           <li class="p-2">
+              <label for="country" class="block text-sm font-medium leading-6 text-white">Fit Image</label>
+              <div class="mt-2">
+                <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-md border-0 bg-white/5 py-1.5 p-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 [&_*]:text-black">
+                  <option>Contain</option>
+                  <option>Cover</option>
+                  <option>Fit</option>
+                </select>
+              </div>
+           </li>
+           <li class="p-2">
+              <label for="country" class="block text-sm font-medium leading-6 text-white">Position</label>
+              <div class="mt-2">
+                <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-md border-0 bg-white/5 py-1.5 p-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 [&_*]:text-black">
+                  <option>Center</option>
+                  <option>Top</option>
+                  <option>Left</option>
+                  <option>Right</option>
+                  <option>Bottom</option>
+                </select>
+              </div>
+           </li>
+           <li class="p-2">
+              <label for="country" class="block text-sm font-medium leading-6 text-white">Format</label>
+              <div class="mt-2">
+                <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-md border-0 bg-white/5 py-1.5 p-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 [&_*]:text-black">
+                  <option>AVIF</option>
+                  <option>JPG</option>
+                  <option>PNG</option>
+                  <option>WEBP</option>
+                  <option>GIF</option>
+                  <option>BLURHASH</option>
+                </select>
+              </div>
+           </li>
+           <li class="p-2">
+              <div class="mt-6 flex items-center justify-end gap-x-6 w-">
+                 <button type="submit" class="rounded-md bg-indigo-500 w-full px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Save</button>
+               </div>
+           </li>
+        </ul>
+     </div>
+  </aside>
+  
+  <div class="p-4 sm:ml-64">
+     <div class="border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14 h-[90vh]">
+        <div class="flex items-center justify-center h-[75vh]">
+        <img  src="https://plus.unsplash.com/premium_photo-1675629519404-187e26d24194?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHx8" />
+    </div>
+     <div class="flex items-end justify-center">
+        <div class=" bg-gray-800 w-[80vh] h-16  rounded-lg  ">
+            asdad
+        </div>
+     </div>
+    </div>
+  </div>
+  
