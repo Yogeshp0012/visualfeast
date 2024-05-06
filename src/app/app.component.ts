@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { NetlifyIdentityService } from './netlify-identity.service';
 
@@ -9,8 +9,14 @@ import { NetlifyIdentityService } from './netlify-identity.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent{
+export class AppComponent implements OnInit{
   title = 'visualfeast';
 
   constructor(private auth: NetlifyIdentityService, private router: Router){}
+
+  ngOnInit(): void {
+      if(!this.auth.getCurrentUser()){
+        this.router.navigateByUrl("/login");
+      }
+  }
 }
