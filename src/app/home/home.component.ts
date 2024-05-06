@@ -15,7 +15,7 @@ export class HomeComponent {
 
     logoutUser(){
         this.auth.logoutUser().then((res: any) =>
-            this.router.navigate(['/login'])).then((res: any) => {this.auth.removeToken();})
+            this.router.navigate(['/login']))
         .catch((err: any) => console.log("Failed to logout"));
     }
 }

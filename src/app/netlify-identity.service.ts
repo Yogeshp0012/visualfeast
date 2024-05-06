@@ -22,31 +22,11 @@ export class NetlifyIdentityService {
         return this._auth.signup(email, password);
     }
 
+    loginUser(email: string, password: string) {
+        return this._auth.login(email, password,true);
+    }
+
     logoutUser() {
         return this._auth.logout();
-    }
-
-    setToken() {
-        const currentUser = this.getCurrentUser();
-        const jwt = currentUser.jwt();
-        jwt
-            .then((response: any) => localStorage.setItem('netlify-token', response))
-            .catch((error: any) => {
-                console.log('Error fetching JWT token', error);
-                throw error;
-            });
-        ;
-    }
-
-    getToken() {
-        return localStorage.getItem('netlify-token');
-    }
-
-    removeToken() {
-        localStorage.removeItem('netlify-token');
-    }
-
-    verifyJWT(){
-        return this._auth.jwtVerify(this.getToken());
     }
 }
