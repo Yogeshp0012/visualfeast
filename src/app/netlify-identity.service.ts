@@ -27,6 +27,6 @@ export class NetlifyIdentityService {
     }
 
     logoutUser() {
-        return this._auth.logout();
+        return this.getCurrentUser().logout();
     }
 }
