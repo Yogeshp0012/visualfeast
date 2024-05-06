@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NetlifyIdentityService } from '../netlify-identity.service';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
+
 
 @Component({
     selector: 'app-register',
@@ -11,13 +12,14 @@ import { Router, RouterModule } from '@angular/router';
     templateUrl: './register.component.html',
     styleUrl: './register.component.scss'
 })
-export class RegisterComponent {
+export class RegisterComponent{
     email: string = '';
     password: string = '';
     emailError: boolean = false;
     passwordError: boolean = false;
 
-    constructor(private auth: NetlifyIdentityService, private router: Router) { }
+    constructor(private auth: NetlifyIdentityService, private router: Router) {
+    }
 
     registerUser(): void {
         this.emailError=false;
