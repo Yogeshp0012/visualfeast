@@ -16,7 +16,12 @@ export class AppComponent implements OnInit {
 
   ngOnInit(){
     if(!this.auth.getCurrentUser()){
+        console.log(this.auth.getCurrentUser());
         this.router.navigateByUrl("/register")
+    }
+    else{
+        console.log(this.auth.getCurrentUser());
+        this.router.navigateByUrl("/home")
     }
   }
 }

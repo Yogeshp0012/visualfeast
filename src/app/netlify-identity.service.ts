@@ -21,4 +21,8 @@ export class NetlifyIdentityService {
     registerUser(email: string,password: string){
         return this._auth.signup(email,password);
     }
+
+    logoutUser(){
+        return this._auth.logout();
+    }
 }
