@@ -31,7 +31,8 @@ export class RegisterComponent {
             return;
         }
         this.auth.registerUser(this.email, this.password).then((res: any) => this.router.navigate(['/home']))
-            .catch((err:any) => console.log(err));
+        .then((res: any) => this.auth.setToken())
+        .catch((err:any) => console.log(err));
     }
 
      isValidEmail(email: any): boolean {

@@ -14,7 +14,8 @@ export class HomeComponent {
     constructor(private auth: NetlifyIdentityService, private router: Router){}
 
     logoutUser(){
-        this.auth.logoutUser().then((res: any) => this.router.navigate(['/login']))
+        this.auth.logoutUser().then((res: any) =>
+            this.router.navigate(['/login'])).then((res: any) => {this.auth.removeToken();})
         .catch((err: any) => console.log("Failed to logout"));
     }
 }

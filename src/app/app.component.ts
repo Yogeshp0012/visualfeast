@@ -15,13 +15,12 @@ export class AppComponent implements OnInit {
   constructor(private auth: NetlifyIdentityService, private router: Router){}
 
   ngOnInit(){
-    if(!this.auth.getCurrentUser()){
-        console.log(this.auth.getCurrentUser());
-        this.router.navigateByUrl("/register")
-    }
-    else{
-        console.log(this.auth.getCurrentUser());
+    try {
+        const { payload } = this.auth.verifyJWT();
+        console.log(payload);
         this.router.navigateByUrl("/home")
+      } catch (error) {
+        this.router.navigateByUrl("/register")
+      }
     }
-  }
 }
