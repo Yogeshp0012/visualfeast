@@ -8,7 +8,7 @@ export class NetlifyIdentityService {
     private _auth: any;
     constructor() {
         this._auth = new GoTrue({
-            APIUrl: 'https://visualfeast.netlify.com/.netlify/identity',
+            APIUrl: 'https://visualfeast.netlify.app/.netlify/identity',
             audience: '',
             setCookie: false,
         });
