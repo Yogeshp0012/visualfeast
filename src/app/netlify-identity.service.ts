@@ -18,8 +18,8 @@ export class NetlifyIdentityService {
         return this._auth.currentUser();
     }
 
-    registerUser(email: string, password: string) {
-        return this._auth.signup(email, password);
+    async registerUser(email: string, password: string) {
+        return await this._auth.signup(email, password);
     }
 
     loginUser(email: string, password: string) {
