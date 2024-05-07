@@ -27,14 +27,6 @@
                         </button>
                     </div>
                 </div>
-                <div class="flex items-center ms-3">
-                    <div>
-                        <button type="button" (click)="logoutUser()"
-                            class="inline-flex disabled:cursor-not-allowed items-center gap-x-1.5 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                            Logout
-                        </button>
-                    </div>
-                </div>
             </div>
 
         </div>
@@ -147,162 +139,24 @@
 
         <div class="grid grid-cols-3 gap-4 mb-4">
             <div class="flex items-center justify-center h-32 md:h-96 rounded bg-gray-50 dark:bg-gray-800">
-                <button type="button"
+                <button *ngIf="!openNewImageModal" type="button" (click)="openNewImageModal = !openNewImageModal"
                     class="rounded-full bg-indigo-600 p-2 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                     <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                         <path
                             d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
                     </svg>
                 </button>
-                <div class="ml-4 text-white">Add Image</div>
+                <div *ngIf="!openNewImageModal" class="ml-4 text-white">Add Image</div>
 
-                <div class="rounded-md h-12 w-12 border-4 border-t-4 border-blue-500 animate-spin absolute"></div>
-
-            </div>
-            <div class="flex items-center justify-center h-32 md:h-96 rounded bg-gray-50 dark:bg-gray-800">
-                <button type="button"
-                    class="rounded-full bg-indigo-600 p-2 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path
-                            d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
-                    </svg>
-                </button>
-                <div class="ml-4 text-white">Add Image</div>
-            </div>
-            <div class="flex items-center justify-center h-32 md:h-96 rounded bg-gray-50 dark:bg-gray-800">
-                <button type="button"
-                    class="rounded-full bg-indigo-600 p-2 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path
-                            d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
-                    </svg>
-                </button>
-                <div class="ml-4 text-white">Add Image</div>
-            </div>
-        </div>
-        <div class="grid grid-cols-3 gap-4 mb-4">
-            <div class="flex items-center justify-center h-32 md:h-96 rounded bg-gray-50 dark:bg-gray-800">
-                <button type="button"
-                    class="rounded-full bg-indigo-600 p-2 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path
-                            d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
-                    </svg>
-                </button>
-                <div class="ml-4 text-white">Add Image</div>
-            </div>
-            <div class="flex items-center justify-center h-32 md:h-96 rounded bg-gray-50 dark:bg-gray-800">
-                <button type="button"
-                    class="rounded-full bg-indigo-600 p-2 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path
-                            d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
-                    </svg>
-                </button>
-                <div class="ml-4 text-white">Add Image</div>
-            </div>
-            <div class="flex items-center justify-center h-32 md:h-96 rounded bg-gray-50 dark:bg-gray-800">
-                <button type="button"
-                    class="rounded-full bg-indigo-600 p-2 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path
-                            d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
-                    </svg>
-                </button>
-                <div class="ml-4 text-white">Add Image</div>
+                <div *ngIf="openNewImageModal" class="rounded-md h-12 w-12 border-4 border-t-4 border-blue-500 animate-spin absolute"></div>
+                <app-image-card />
             </div>
         </div>
 
     </div>
 </div>
 
-<div class="relative hidden z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-    <!--
-      Background backdrop, show/hide based on modal state.
-
-      Entering: "ease-out duration-300"
-        From: "opacity-0"
-        To: "opacity-100"
-      Leaving: "ease-in duration-200"
-        From: "opacity-100"
-        To: "opacity-0"
-    -->
-    <div class="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity"></div>
-
-    <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
-        <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-            <!--
-          Modal panel, show/hide based on modal state.
-
-          Entering: "ease-out duration-300"
-            From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            To: "opacity-100 translate-y-0 sm:scale-100"
-          Leaving: "ease-in duration-200"
-            From: "opacity-100 translate-y-0 sm:scale-100"
-            To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-        -->
-            <div
-                class="relative transform overflow-hidden rounded-lg bg-gray-700 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-                <div class="bg-gray-800 px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                    <div class="sm:flex sm:items-start">
-
-                        <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                            <h3 class="text-base font-semibold leading-6 text-gray-100" id="modal-title">Add a new image
-                            </h3>
-                            <div class="mt-8 w-[20vw]">
-                                <label for="first-name" class="block text-sm font-medium leading-6 text-white">Image
-                                    Name</label>
-                                <div class="mt-2">
-                                    <input type="text" name="first-name" id="first-name" autocomplete="given-name"
-                                        class="block p-2 w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 outline-none">
-                                </div>
-                            </div>
-                            <div class="mt-2 w-[20vw]">
-                                <label for="first-name" class="block text-sm font-medium leading-6 text-white">Image
-                                    URL</label>
-                                <div class="mt-2">
-                                    <input type="text" name="first-name" id="first-name" autocomplete="given-name"
-                                        class="block p-2 w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 outline-none">
-                                </div>
-                            </div>
-                            <div class="mt-2 w-[20vw]">
-                                <label for="cover-photo" class="block text-sm font-medium leading-6 text-white">Or Upload a Photo</label>
-                                <div
-                                    class="mt-2 flex justify-center rounded-lg border border-dashed border-white/25 px-6 py-10">
-                                    <div class="text-center">
-                                        <svg class="mx-auto h-12 w-12 text-gray-500" viewBox="0 0 24 24"
-                                            fill="currentColor" aria-hidden="true">
-                                            <path fill-rule="evenodd"
-                                                d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z"
-                                                clip-rule="evenodd" />
-                                        </svg>
-                                        <div class="mt-4 flex text-sm leading-6 text-gray-400">
-                                            <label for="file-upload"
-                                                class="relative cursor-pointer rounded-md text-indigo-400 font-semibol focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 focus-within:ring-offset-gray-900 hover:text-indigo-500">
-                                                <span>Upload a file</span>
-                                                <input id="file-upload" name="file-upload" type="file" class="sr-only">
-                                            </label>
-                                            <p class="pl-1">or drag and drop</p>
-                                        </div>
-                                        <p class="text-xs leading-5 text-gray-400">PNG, JPG, GIF up to 10MB</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-800 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                    <button type="button"
-                        class="ml-3 inline-flex disabled:cursor-not-allowed items-center gap-x-1.5 w-16 justify-center  rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                        Add
-                    </button>
-                    <button type="button"
-                        class="mt-3 inline-flex w-full justify-center rounded-md px-3 py-2 text-sm font-semibold text-gray-100 shadow-sm ring-1 ring-inset ring-gray-300 sm:mt-0 sm:w-auto">Cancel</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<app-new-image-modal (closeModal)="openNewImageModal = false" [openModal]="openNewImageModal" />
 
 <!-- Global notification live region, render this permanently at the end of the document -->
 <div aria-live="assertive" class="pointer-events-none  fixed bottom-0 right-0 flex items-end px-4 py-6 sm:items-start sm:p-6 w-full">

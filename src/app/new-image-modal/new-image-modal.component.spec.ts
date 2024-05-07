@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RegisterComponent } from './register.component';
+import { NewImageModalComponent } from './new-image-modal.component';
 
-describe('RegisterComponent', () => {
-  let component: RegisterComponent;
-  let fixture: ComponentFixture<RegisterComponent>;
+describe('NewImageModalComponent', () => {
+  let component: NewImageModalComponent;
+  let fixture: ComponentFixture<NewImageModalComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RegisterComponent]
+      imports: [NewImageModalComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(RegisterComponent);
+    fixture = TestBed.createComponent(NewImageModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,21 +1,20 @@
 import { Component } from '@angular/core';
-import { NetlifyIdentityService } from '../netlify-identity.service';
 import { Router, RouterModule } from '@angular/router';
+import { NewImageModalComponent } from '../new-image-modal/new-image-modal.component';
+import { CommonModule } from '@angular/common';
+import { ImageCardComponent } from '../image-card/image-card.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, NewImageModalComponent, CommonModule, ImageCardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
 
-    constructor(private auth: NetlifyIdentityService, private router: Router){}
+    openNewImageModal: boolean = false;
 
-    logoutUser(){
-        this.auth.logoutUser().then((res: any) =>
-            this.router.navigate(['/login']))
-        .catch((err: any) => console.log("Failed to logout"));
-    }
+    constructor(private router: Router){}
+
 }
