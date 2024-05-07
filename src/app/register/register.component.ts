@@ -32,8 +32,8 @@ export class RegisterComponent{
             this.passwordError = true;
             return;
         }
-        this.auth.registerUser(this.email, this.password).then((res: any) => console.log(res)).then(() => this.router.navigate(['/home']))
-        .catch((err:any) => console.log(err));
+        this.auth.registerUser(this.email, this.password).then((res: any) => console.log("Successfully Logged in",res)).then(() => this.router.navigate(['/home']))
+        .catch((err:any) => console.log("Failed to login", err));
     }
 
      isValidEmail(email: any): boolean {
