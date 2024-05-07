@@ -19,7 +19,10 @@ export class NetlifyIdentityService {
     }
 
     async registerUser(email: string, password: string) {
-        return await this._auth.signup(email, password);
+        await this._auth
+  .signup(email, password)
+  .then((response: any) => console.log('Confirmation email sent', response))
+  .catch((error: any) => console.log("It's an error", error));
     }
 
     loginUser(email: string, password: string) {
